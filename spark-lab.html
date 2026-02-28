@@ -123,26 +123,26 @@
             Spark Lab es un <strong class="text-dark-700">espacio experimental</strong> donde trabajamos con sistemas agénticos que:
           </p>
           <div class="mt-8 grid sm:grid-cols-2 gap-4">
-            <div class="glass glass-hover rounded-xl p-5 flex gap-4 items-start">
-              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center">
+            <div class="rounded-xl p-5 flex gap-4 items-start bg-dark-50/80 border border-white/5">
+              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/15 flex items-center justify-center">
                 <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </span>
               <span class="text-dark-700">Ejecutan tareas reales: emails, agenda, búsquedas, automatizaciones</span>
             </div>
-            <div class="glass glass-hover rounded-xl p-5 flex gap-4 items-start">
-              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center">
+            <div class="rounded-xl p-5 flex gap-4 items-start bg-dark-50/80 border border-white/5">
+              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/15 flex items-center justify-center">
                 <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </span>
               <span class="text-dark-700">Funcionan de forma autónoma, no solo responden</span>
             </div>
-            <div class="glass glass-hover rounded-xl p-5 flex gap-4 items-start">
-              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center">
+            <div class="rounded-xl p-5 flex gap-4 items-start bg-dark-50/80 border border-white/5">
+              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/15 flex items-center justify-center">
                 <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </span>
               <span class="text-dark-700">Pueden desplegar proyectos completos para tu negocio</span>
             </div>
-            <div class="glass glass-hover rounded-xl p-5 flex gap-4 items-start">
-              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center">
+            <div class="rounded-xl p-5 flex gap-4 items-start bg-dark-50/80 border border-white/5">
+              <span class="shrink-0 w-10 h-10 rounded-xl bg-neon-500/15 flex items-center justify-center">
                 <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
               </span>
               <span class="text-dark-700">Trabajan 24/7 en entornos seguros (sandbox / cloud)</span>
@@ -357,30 +357,75 @@
 <script>
 (function(){
   var c=document.getElementById("space-canvas"),ctx=c.getContext("2d");
-  var stars=[],count=200,speed=0.3;
+  if(window.matchMedia("(prefers-reduced-motion:reduce)").matches)return;
   function resize(){c.width=window.innerWidth;c.height=window.innerHeight}
   window.addEventListener("resize",resize);resize();
-  for(var i=0;i<count;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+0.5,dx:(Math.random()-0.5)*speed,dy:(Math.random()-0.5)*speed,o:Math.random()*0.6+0.2});
+
+  // Flow field particles
+  var particles=[];
+  var numParticles=120;
+  var noiseScale=0.003;
+  var time=0;
+
+  // Simple noise function
+  function noise(x,y,t){
+    return Math.sin(x*0.7+t)*Math.cos(y*0.5+t*0.8)+Math.sin((x+y)*0.5+t*1.2)*0.5;
+  }
+
+  for(var i=0;i<numParticles;i++){
+    particles.push({
+      x:Math.random()*c.width,
+      y:Math.random()*c.height,
+      speed:Math.random()*0.8+0.3,
+      life:Math.random()*200+100,
+      maxLife:Math.random()*200+100,
+      hue:Math.random()>0.7?180:160 // cyan or green
+    });
+  }
+
   function draw(){
-    ctx.clearRect(0,0,c.width,c.height);
-    for(var i=0;i<count;i++){
-      var s=stars[i];
-      s.x+=s.dx;s.y+=s.dy;
-      if(s.x<0)s.x=c.width;if(s.x>c.width)s.x=0;
-      if(s.y<0)s.y=c.height;if(s.y>c.height)s.y=0;
-      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-      ctx.fillStyle="rgba(110,231,183,"+s.o+")";ctx.fill();
-    }
-    /* Shooting star occasionally */
-    if(Math.random()<0.002){
-      var sx=Math.random()*c.width,sy=Math.random()*c.height*0.5;
-      var grad=ctx.createLinearGradient(sx,sy,sx+80,sy+40);
-      grad.addColorStop(0,"rgba(110,231,183,0.8)");grad.addColorStop(1,"rgba(110,231,183,0)");
-      ctx.strokeStyle=grad;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+80,sy+40);ctx.stroke();
+    // Fade trail effect
+    ctx.fillStyle="rgba(9,9,11,0.06)";
+    ctx.fillRect(0,0,c.width,c.height);
+
+    time+=0.003;
+
+    for(var i=0;i<numParticles;i++){
+      var p=particles[i];
+      var angle=noise(p.x*noiseScale,p.y*noiseScale,time)*Math.PI*2;
+
+      p.x+=Math.cos(angle)*p.speed;
+      p.y+=Math.sin(angle)*p.speed;
+      p.life--;
+
+      // Draw flowing line
+      var alpha=(p.life/p.maxLife)*0.4;
+      var nx=p.x+Math.cos(angle)*p.speed*3;
+      var ny=p.y+Math.sin(angle)*p.speed*3;
+
+      ctx.beginPath();
+      ctx.moveTo(p.x,p.y);
+      ctx.lineTo(nx,ny);
+      ctx.strokeStyle=p.hue===180?"rgba(34,211,238,"+alpha+")":"rgba(110,231,183,"+alpha+")";
+      ctx.lineWidth=1;
+      ctx.stroke();
+
+      // Also draw a small dot
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,0.8,0,Math.PI*2);
+      ctx.fillStyle=p.hue===180?"rgba(34,211,238,"+alpha*1.5+")":"rgba(110,231,183,"+alpha*1.5+")";
+      ctx.fill();
+
+      // Reset particle if dead or out of bounds
+      if(p.life<=0||p.x<-20||p.x>c.width+20||p.y<-20||p.y>c.height+20){
+        p.x=Math.random()*c.width;
+        p.y=Math.random()*c.height;
+        p.life=p.maxLife;
+      }
     }
     requestAnimationFrame(draw);
   }
-  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches)draw();
+  draw();
 }());
 </script>
 </body>
