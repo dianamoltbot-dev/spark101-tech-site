@@ -21,6 +21,8 @@
     }}}
   </script>
   <style>
+    /* Space particles */
+    #space-canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:#09090b;color:#e4e4e7}
     h1,h2,h3,h4,h5,h6,.font-heading{font-family:'Sora',sans-serif;letter-spacing:-.02em}
@@ -49,6 +51,7 @@
   </style>
 </head>
 <body class="antialiased">
+  <canvas id="space-canvas"></canvas>
 
   <!-- Nav -->
   <nav class="fixed top-0 w-full z-50 bg-dark-950/80 backdrop-blur-xl border-b border-white/5">
@@ -351,5 +354,34 @@
       document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
     });
   </script>
+<script>
+(function(){
+  var c=document.getElementById("space-canvas"),ctx=c.getContext("2d");
+  var stars=[],count=200,speed=0.3;
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight}
+  window.addEventListener("resize",resize);resize();
+  for(var i=0;i<count;i++)stars.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.5+0.5,dx:(Math.random()-0.5)*speed,dy:(Math.random()-0.5)*speed,o:Math.random()*0.6+0.2});
+  function draw(){
+    ctx.clearRect(0,0,c.width,c.height);
+    for(var i=0;i<count;i++){
+      var s=stars[i];
+      s.x+=s.dx;s.y+=s.dy;
+      if(s.x<0)s.x=c.width;if(s.x>c.width)s.x=0;
+      if(s.y<0)s.y=c.height;if(s.y>c.height)s.y=0;
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle="rgba(110,231,183,"+s.o+")";ctx.fill();
+    }
+    /* Shooting star occasionally */
+    if(Math.random()<0.002){
+      var sx=Math.random()*c.width,sy=Math.random()*c.height*0.5;
+      var grad=ctx.createLinearGradient(sx,sy,sx+80,sy+40);
+      grad.addColorStop(0,"rgba(110,231,183,0.8)");grad.addColorStop(1,"rgba(110,231,183,0)");
+      ctx.strokeStyle=grad;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(sx+80,sy+40);ctx.stroke();
+    }
+    requestAnimationFrame(draw);
+  }
+  if(!window.matchMedia("(prefers-reduced-motion:reduce)").matches)draw();
+}());
+</script>
 </body>
 </html>
