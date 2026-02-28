@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>💥 SPARK101 — Consultora de IA</title>
+    <meta name="description" content="Integramos IA en procesos, equipos y productos para crecer con menos fricción: más velocidad, menos costos y mejores decisiones." />
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GB836XLLE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+      gtag('config', 'G-0GB836XLLE', { send_page_view: true, page_path: window.location.pathname });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+      /* Confetti 💥 */
+      #confetti-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 9999; overflow: hidden; }
+      .confetti-emoji { position: absolute; font-size: 22px; will-change: transform, opacity; animation: confetti-pop 1900ms ease-out forwards; filter: drop-shadow(0 2px 4px rgba(0,0,0,.3)); }
+      @keyframes confetti-pop {
+        0% { opacity: 1; transform: translate(0,0) scale(1) rotate(0deg); }
+        100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.9) rotate(var(--rot)); }
+      }
+    </style>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <noscript>
+      <img height="1" width="1" style="display:none" alt=""
+           src="https://www.facebook.com/tr?id=1457735278612812&ev=PageView&noscript=1" />
+    </noscript>
+
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#top" class="text-lg sm:text-xl font-extrabold tracking-tight text-gray-900"><span class="mr-1">💥</span>SPARK101</a>
+          <div class="hidden sm:flex items-center gap-6">
+            <a href="#elige" class="text-gray-700 hover:text-gray-900">Elegí tu camino</a>
+            <a href="#para-quien" class="text-gray-700 hover:text-gray-900">¿Para quién?</a>
+            <a href="#casos" class="text-gray-700 hover:text-gray-900">Casos de uso</a>
+            <a href="#metodo" class="text-gray-700 hover:text-gray-900">Cómo trabajamos</a>
+            <a href="#mentora" class="text-gray-700 hover:text-gray-900">Mentora</a>
+            <a href="speaker.html" class="text-gray-700 hover:text-gray-900">Speaker</a>
+            <a href="#cta-final" class="inline-flex items-center justify-center px-4 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-sm shadow-indigo-200">Empezar</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile breadcrumb/menu -->
+    <div class="sm:hidden border-b border-gray-100 bg-white">
+      <div class="max-w-7xl mx-auto px-4 py-2 text-sm overflow-x-auto whitespace-nowrap">
+        <a href="#elige" class="text-gray-700 hover:text-gray-900">Menú</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="#para-quien" class="text-gray-700 hover:text-gray-900">¿Para quién?</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="#casos-por-rubro" class="text-gray-700 hover:text-gray-900">Casos</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="#cta-final" class="text-gray-700 hover:text-gray-900">CTA</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="speaker.html" class="text-gray-700 hover:text-gray-900">Speaker</a>
+        <span class="mx-1 text-gray-400">/</span>
+        <a href="https://hub.spark101.tech" target="_blank" rel="noopener noreferrer" class="text-indigo-600 font-medium hover:text-indigo-700">HUB</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <header id="top" class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-medium mb-4">💥 La chispa para volver a encender tu negocio con IA</div>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight text-white">SPARK101 — Consultora de IA</h1>
+            <p class="mt-6 text-lg sm:text-xl text-gray-300">Integramos IA en tus procesos, equipos y productos para crecer con menos fricción: más velocidad, menos costos y mejores decisiones.</p>
+            <p class="mt-3 text-base sm:text-lg text-gray-400">¿Sos dueño o gerente? Este es tu punto de partida.</p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="https://wa.me/5491125367148?text=Hola%20Cami%2C%20%C2%BFc%C3%B3mo%20est%C3%A1s%3F%20Quiero%20automatizar%20con%20Ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-[0_0_40px_rgba(16,185,129,0.35)]">
+                <span class="mr-2">Escribinos por WhatsApp</span>
+                <i data-feather="message-circle" class="w-5 h-5"></i>
+              </a>
+              <a href="#elige" class="inline-flex items-center justify-center px-7 py-3 rounded-2xl bg-white/5 hover:bg-white/10 text-white font-semibold ring-1 ring-white/20">Ver opciones</a>
+            </div>
+           
+          </div>
+          <div class="relative">
+            <div class="absolute -inset-4 -z-10 bg-gradient-to-tr from-indigo-200/40 to-transparent rounded-3xl blur-2xl"></div>
+            <div class="rounded-3xl bg-neutral-900 border border-neutral-800 shadow-2xl p-2">
+              <div class="rounded-2xl overflow-hidden bg-neutral-900">
+                <img src="images/foto-principal.jpg" alt="Camila Velasco en acción" class="w-full h-[28rem] sm:h-[32rem] object-cover object-top" style="object-position: 40% 20%;" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Elegí tu camino -->
+      <section class="py-16 border-t border-gray-100" id="elige">
+        <div class="max-w-7xl mx-auto relative overflow-hidden rounded-3xl bg-white ring-2 ring-violet-400/70 shadow-[0_0_40px_rgba(139,92,246,0.35)]">
+          <div class="px-4 sm:px-6 lg:px-8 py-12">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 text-center">Elegí tu camino</h1>
+          <p class="mt-2 text-center text-gray-700">Cursos y Capacitaciones o Consultoría a Medida</p>
+          <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <!-- Cursos y Capacitaciones -->
+            <div class="p-6 rounded-2xl bg-white border border-gray-300 shadow-sm">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-sm font-semibold">
+                🟧 Cursos y Capacitaciones
+              </div>
+
+              <h3 class="mt-3 text-xl font-bold text-gray-900">
+                Cerrá el 2025 con IA Agéntica
+              </h3>
+
+              <img src="images/semana-ia.jpg" alt="Cursos y Capacitaciones"
+                   class="mt-3 w-full h-40 object-cover rounded-xl border border-gray-100" loading="lazy" />
+
+              <p class="mt-2 text-gray-700">2 Workshops para aprender a gestionar tu propio equipo de agentes:</p>
+              <ul class="mt-1 text-gray-700 list-disc pl-5 space-y-1">
+                <li><span class="font-semibold">📊</span> Agentes que construyen dashboards</li>
+                <li><span class="font-semibold">🎥</span> Agentes que crean marketing inteligente a escala</li>
+              </ul>
+
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a href="workshops.html" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-[0_0_30px_rgba(16,185,129,0.35)]">
+                  Quiero estos Workshops
+                </a>
+              </div>
+            </div>
+            <!-- Consultoría 1:1 -->
+            <div class="p-6 rounded-2xl bg-white border border-gray-300 shadow-sm">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm font-semibold">🟦 Consultoría</div>
+              <h3 class="mt-3 text-xl font-bold text-gray-900">Consultoría 1:1 con Cami</h3>
+              <img src="images/consultoria1-1.jpg" alt="Consultoría 1:1" class="mt-3 w-full h-40 object-cover rounded-xl border border-gray-100" loading="lazy" />
+              <ul class="mt-2 space-y-1 text-gray-700 list-disc pl-5">
+                <li>Roadmap de oportunidades por área</li>
+                <li>Revisión de herramientas y stack</li>
+                <li>Prototipos guiados y automatizaciones</li>
+                <li>Playbooks y prompts para equipos</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a href="1a1.html" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold">Quiero Consultoría 1:1</a>
+              </div>  
+            </div>
+            <!-- Implementaciones a Medida -->
+            <div class="p-6 rounded-2xl bg-neutral-950 border border-neutral-800 shadow-sm text-white">
+              <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-semibold">⬜ Llave en mano</div>
+              <h3 class="mt-3 text-xl font-bold text-white">Desarrollos a Medida</h3>
+              <img src="images/desarrollos.png" alt="Implementaciones a Medida" class="mt-3 w-full h-40 object-cover rounded-xl border border-neutral-800" loading="lazy" />
+              <ul class="mt-2 space-y-1 text-gray-300 list-disc pl-5">
+                <li>Asistentes de IA para ventas</li>
+                <li>Automatización de procesos críticos</li>
+                <li>Integraciones con sistemas y datos</li>
+                <li>Entrenamiento in-company con adopción real</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <a href="https://wa.me/12532432058?text=Hola%2C%20quiero%20implementar%20IA%20a%20medida%20en%20mi%20empresa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-100 text-gray-900 font-semibold">Quiero un Desarrollo</a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPARK HUB -->
+      <section class="py-16" id="spark-hub">
+        <div class="relative overflow-hidden rounded-3xl">
+          <div class="absolute inset-0 -z-10 bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900"></div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center text-white">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-semibold">Nuevo</span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight">SPARK HUB</h2>
+            <p class="mt-3 text-indigo-100">Galería de Proyectos, Casos de Uso y Acceso de Alumnos</p>
+            <div class="mt-7">
+              <a href="hub.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold ring-1 ring-white/10 shadow-[0_0_30px_rgba(99,102,241,0.35)]">
+                Ir al SPARK HUB
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lo que hoy te frena -->
+      <section class="py-16 border-t border-gray-100" id="frenos">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Lo que hoy te frena</h2>
+          <ul class="mt-6 space-y-3 text-gray-800">
+            <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Tus clientes ya piden “algo con IA”, pero no sabés por dónde empezar.</li>
+            <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Miedo a prometer y no poder implementar sin devs.</li>
+            <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Horas en tareas repetitivas que podrías automatizar.</li>
+            <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Curva técnica y tiempo del equipo que no tenés.</li>
+          </ul>
+          <div class="mt-8 p-6 rounded-2xl bg-indigo-50 border border-indigo-100 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Lo que no te frena: Discovery Call con el Equipo de Spark101</h3>
+            <div class="mt-4">
+              <a href="https://wa.me/5491125367148?text=Hola%20Cami%2C%20%C2%BFc%C3%B3mo%20est%C3%A1s%3F%20Quiero%20automatizar%20con%20Ai" target="_blank" rel="noopener noreferrer" aria-label="Quiero agregar IA a mi negocio por WhatsApp" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-[0_0_30px_rgba(16,185,129,0.35)]">
+                Quiero agregar IA a mi negocio
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+         <!-- Galería y prensa -->
+         <section class="py-16 border-t border-gray-100" id="galeria">
+          <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 text-center">Ayudé a más de 2000 personas a programar con IA</h3>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <img src="https://static.wixstatic.com/media/971f6b_03c0a57a394c45439f363dd06bae42b0~mv2.jpeg/v1/fill/w_1200,h_798,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ciclo_presencial.jpeg" alt="Ciclo presencial de Spark101" class="w-full h-64 object-cover rounded-xl border border-gray-100 shadow-sm" loading="lazy" />
+              <img src="https://i.ytimg.com/vi/2q74tjzK5XI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCc2NYY7LcVERwn2smFDTlWORxcFg" alt="Clase en YouTube de Spark101" class="w-full h-64 object-cover rounded-xl border border-gray-100 shadow-sm" loading="lazy" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN6ezhHOSqryTGd_yWUAjdM6MMLMxs9Bu2eG5i9aRc7C0W2F4yimEfsb-_bpu-g4QiteQ&usqp=CAU" alt="Participantes de Spark101" class="w-full h-64 object-cover rounded-xl border border-gray-100 shadow-sm" loading="lazy" />
+            </div>
+            <div class="mt-8">
+              <img src="https://static.wixstatic.com/media/971f6b_698ba145c8114df8a259923622d710c3~mv2.png/v1/fill/w_1200,h_674,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/diariodemariana4.png" alt="Cobertura en medios" class="w-full h-[36rem] sm:h-[48rem] object-cover object-bottom rounded-xl border border-gray-100 shadow-sm" loading="lazy" />
+            </div>
+          </div>
+        </section>
+
+      <!-- Casos de uso por rubro -->
+      <section class="py-16 border-t border-gray-100" id="casos-por-rubro">
+        <div class="max-w-7xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Casos de uso por rubro</h2>
+          <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Marketing & Ads -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Marketing & Ads</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Briefs y propuestas automatizadas</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Reporting semanal automático</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Calificación de leads por WhatsApp</li>
+              </ul>
+            </div>
+            <!-- Finanzas & Contabilidad -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Finanzas & Contabilidad</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Score de Riesgo & Liquidez</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Recordatorios de vencimientos</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> KPIs y panel para clientes</li>
+              </ul>
+            </div>
+            <!-- Legal -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Legal</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Intake automatizado</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Borradores de contratos</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Seguimiento de casos</li>
+              </ul>
+            </div>
+            <!-- Coaching & EdTech -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Coaching & EdTech</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Experiencia conversacional educativa</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Planes personalizados con IA</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Automatización de seguimiento</li>
+              </ul>
+            </div>
+            <!-- Diseño & Producto -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Diseño & Producto</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Brief con IA y control de etapas</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Centralización de feedback</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Generación de entregables</li>
+              </ul>
+            </div>
+            <!-- Consultoría general -->
+            <div class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm">
+              <h4 class="font-semibold text-gray-900">Consultoría general</h4>
+              <ul class="mt-3 space-y-2 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Discovery previo</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Automatización de procesos críticos</li>
+                <li class="flex gap-3"><i data-feather="check" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Seguimiento de implementación</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+   
+
+      <!-- ¿Para quién es? -->
+      <section class="py-16 border-t border-gray-100" id="para-quien">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">¿Para quién es SPARK101?</h2>
+          <ul class="mt-6 space-y-3 text-gray-800">
+            <li class="flex gap-3"><i data-feather="users" class="w-5 h-5 text-indigo-600 mt-0.5"></i> Dueños de negocio que quieren agregar IA sin agrandar el equipo de IT</li>
+            <li class="flex gap-3"><i data-feather="briefcase" class="w-5 h-5 text-indigo-600 mt-0.5"></i> Gerentes de Operaciones, Marketing, Ventas, CX o RR.HH.</li>
+            <li class="flex gap-3"><i data-feather="zap" class="w-5 h-5 text-indigo-600 mt-0.5"></i> Empresas que buscan prototipar rápido, automatizar y validar antes de escalar</li>
+          </ul>
+        </div>
+
+      <!-- Programa visual -->
+      <section class="py-16 border-t border-gray-100" id="programa-visual">
+        <div class="max-w-5xl mx-auto">
+          
+          <img src="https://static.wixstatic.com/media/971f6b_0c3695ec1fd9428d99544fac557e191a~mv2.jpg/v1/fill/w_1200,h_798,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/971f6b_0c3695ec1fd9428d99544fac557e191a~mv2.jpg" alt="Programa Spark101 en práctica" class="mt-4 rounded-xl border border-gray-100 shadow-sm w-full object-cover" loading="lazy" />
+        </div>
+      </section>
+
+      <!-- Conocé a tu mentora -->
+      <section class="py-16 border-t border-white/10" id="mentora">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="relative overflow-hidden rounded-3xl bg-neutral-900/80 border border-neutral-700">
+            <div class="grid lg:grid-cols-2 gap-0 items-stretch">
+              <!-- Imagen grande a la izquierda en desktop -->
+              <div class="p-2 order-2 lg:order-1">
+                <div class="h-full rounded-2xl overflow-hidden bg-neutral-900">
+                  <img src="images/kami-conference.jpeg" alt="Camila Velasco" class="w-full h-[28rem] sm:h-[34rem] lg:h-[36rem] object-cover" loading="lazy" />
+                </div>
+              </div>
+              <!-- Texto a la derecha -->
+              <div class="p-8 sm:p-12 text-white order-1 lg:order-2">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-sm font-semibold"><i data-feather="user" class="w-4 h-4 mr-2"></i>Conocé a Camila, CEO y Founder de SPARK101</div>
+                <h3 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">Camila Velasco</h3>
+                <p class="mt-4 text-base sm:text-lg text-gray-300">Ingeniera Industrial (UTN), consultora en innovación tecnológica y certificada en AI for Good.</p>
+                <p class="mt-3 text-base sm:text-lg text-gray-300">Ayuda a empresas y profesionales a digitalizar procesos, lanzar productos sin fricción técnica y escalar con tu propio equipo.</p>
+                <blockquote class="mt-6 p-5 bg-white/5 border border-white/10 rounded-xl text-indigo-100">“No empezás por la herramienta. Empezás por el problema que querés resolver.”</blockquote>
+                <div class="mt-8">
+                  <a href="https://wa.me/5491125367148?text=Hola%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20consultor%C3%ADa%201%3A1%20con%20Cami" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-7 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-[0_0_40px_rgba(16,185,129,0.35)]">
+                    <span class="mr-2">Hablar con Camila</span>
+                    <i data-feather="message-circle" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lo que vas a lograr + Cómo trabajamos (side by side) -->
+      <section class="py-16 border-t border-gray-100" id="logros-metodo">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid lg:grid-cols-2 gap-12">
+            <div id="logros">
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Lo que vas a lograr</h2>
+              <ul class="mt-6 space-y-3 text-gray-800">
+                <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Automatizar tareas repetitivas y reducir errores</li>
+                <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Prototipar soluciones internas y de cara al cliente</li>
+                <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Acelerar reportes, propuestas y análisis</li>
+                <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Formar al equipo en IA aplicada (sin programar)</li>
+                <li class="flex gap-3"><i data-feather="check-circle" class="w-5 h-5 text-emerald-600 mt-0.5"></i> Decidir con datos y procesos más simples</li>
+              </ul>
+            </div>
+            <div id="metodo">
+              <h2 class="text-2xl sm:text-3xl font-bold text-gray-900">Cómo trabajamos</h2>
+              <ol class="mt-6 space-y-4 text-gray-800">
+                <li class="flex gap-3"><span class="font-bold text-indigo-600">1)</span> Diagnóstico: entendemos tu operación y detectamos quick wins</li>
+                <li class="flex gap-3"><span class="font-bold text-indigo-600">2)</span> Piloto: diseñamos un caso de uso con impacto medible</li>
+                <li class="flex gap-3"><span class="font-bold text-indigo-600">3)</span> Implementación: integraciones, seguridad y adopción</li>
+                <li class="flex gap-3"><span class="font-bold text-indigo-600">4)</span> Entrenamiento: playbooks y prácticas para tu equipo</li>
+                <li class="flex gap-3"><span class="font-bold text-indigo-600">5)</span> Escalado: métricas, mejoras y roadmap por áreas</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Por qué SPARK101 -->
+      <section class="py-16 border-t border-gray-100" id="porque">
+        <div class="max-w-7xl mx-auto">
+          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-indigo-700 text-white ring-1 ring-white/10 shadow-[0_0_40px_rgba(139,92,246,0.35)]">
+            <div class="px-6 sm:px-12 lg:px-16 py-12 text-center">
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Por qué 💥SPARK101</h2>
+              <ul class="mt-8 grid sm:grid-cols-2 gap-5 text-indigo-50">
+                <li class="flex items-start justify-center gap-3">
+                  <i data-feather="award" class="w-6 h-6 text-white"></i>
+                  <span>+2000 personas entrenadas en IA aplicada</span>
+                </li>
+                <li class="flex items-start justify-center gap-3">
+                  <i data-feather="tool" class="w-6 h-6 text-white"></i>
+                  <span>Metodología sin código para validar rápido</span>
+                </li>
+                <li class="flex items-start justify-center gap-3">
+                  <i data-feather="target" class="w-6 h-6 text-white"></i>
+                  <span>Foco en negocio y operación, no solo herramientas</span>
+                </li>
+                <li class="flex items-start justify-center gap-3">
+                  <i data-feather="user-check" class="w-6 h-6 text-white"></i>
+                  <span>Acompañamiento directo de Camila Velasco</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Testimonios -->
+      <section class="py-16 border-t border-gray-100" id="testimonios">
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-3 gap-6">
+          <blockquote class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm"><i data-feather="message-circle" class="w-5 h-5 text-indigo-600"></i><p class="mt-3 text-gray-800">“En una semana teníamos un prototipo funcionando y un plan claro para escalar.”</p></blockquote>
+          <blockquote class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm"><i data-feather="message-circle" class="w-5 h-5 text-indigo-600"></i><p class="mt-3 text-gray-800">“Automatizamos tareas que nos llevaban horas. El equipo lo adoptó rápido.”</p></blockquote>
+          <blockquote class="p-6 bg-white border border-gray-100 rounded-xl shadow-sm"><i data-feather="message-circle" class="w-5 h-5 text-indigo-600"></i><p class="mt-3 text-gray-800">“Aprendí más en una hora con Cami que en meses de prueba y error.”</p></blockquote>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="py-16 border-t border-gray-100" id="faq">
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-2xl sm:text-3xl font-bold text-gray-900">Preguntas frecuentes</h3>
+          <div class="mt-6 space-y-4">
+            <details class="group bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><summary class="flex items-center justify-between cursor-pointer"><span class="font-semibold text-gray-900">¿Necesito saber programar?</span><i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i></summary><p class="mt-3 text-gray-700">No. Podemos trabajar con herramientas no-code y avanzar a integraciones cuando el caso lo requiere.</p></details>
+            <details class="group bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><summary class="flex items-center justify-between cursor-pointer"><span class="font-semibold text-gray-900">¿Qué tan rápido veo resultados?</span><i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i></summary><p class="mt-3 text-gray-700">Apuntamos a pilotos ágiles que validen impacto antes de escalar.</p></details>
+            <details class="group bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><summary class="flex items-center justify-between cursor-pointer"><span class="font-semibold text-gray-900">¿Qué pasa con la privacidad de mis datos?</span><i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i></summary><p class="mt-3 text-gray-700">Diseñamos con seguridad y compliance, usando proveedores y prácticas acordes a tu política interna.</p></details>
+            <details class="group bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><summary class="flex items-center justify-between cursor-pointer"><span class="font-semibold text-gray-900">¿Cómo medimos el ROI?</span><i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i></summary><p class="mt-3 text-gray-700">Tiempo ahorrado, errores reducidos, velocidad de entrega y satisfacción del usuario desde el inicio.</p></details>
+            <details class="group bg-white border border-gray-100 rounded-xl p-5 shadow-sm"><summary class="flex items-center justify-between cursor-pointer"><span class="font-semibold text-gray-900">¿Pueden capacitar a mi equipo?</span><i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i></summary><p class="mt-3 text-gray-700">Sí. Capacitaciones in‑company adaptadas a tus procesos y objetivos.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <section class="py-16 border-t border-gray-100" id="cta-final">
+        <div class="max-w-4xl mx-auto">
+          <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 ring-1 ring-white/10">
+            <div class="absolute -inset-24 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.25),transparent_60%)]"></div>
+            <div class="relative px-6 sm:px-10 lg:px-14 py-12 text-center text-white">
+              <h3 class="text-3xl sm:text-4xl font-extrabold">¿Listo para sumar IA a tu negocio?</h3>
+              <p class="mt-3 text-indigo-100">Elegí tu camino y avanzamos hoy.</p>
+              <div class="mt-8 grid grid-cols-1 gap-4">
+                <a href="https://wa.me/12532432058" target="_blank" rel="noopener noreferrer" class="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold ring-1 ring-white/10 shadow-[0_0_30px_rgba(16,185,129,0.35)]">Cursos y Capacitaciones</a>
+                <a href="#elige" class="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold ring-1 ring-white/10">Consultoría 1 a 1</a>
+                <a href="#elige" class="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl bg-neutral-950 text-white font-semibold ring-1 ring-white/20 hover:bg-white hover:text-neutral-900 transition-colors">Implementaciones a Medida para Empresa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="py-10 border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+        <p> 2023 SPARK101. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-4">
+          <a href="#elige" class="hover:text-gray-900">Elegí tu camino</a>
+          <a href="#para-quien" class="hover:text-gray-900">¿Para quién?</a>
+          <a href="#faq" class="hover:text-gray-900">FAQ</a>
+        </div>
+      </div>
+    </footer>
+  
+      <!-- FAB WhatsApp (arriba) -->
+      <a href="#cta-final" id="fab-whatsapp" aria-label="WhatsApp" class="fixed bottom-24 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-200">
+      <i data-feather="message-circle" class="w-7 h-7"></i>
+    </a>
+     <!-- FAB Contactar (abajo) -->
+     <a href="#elige" id="fab-contactar" aria-label="Contactar" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center px-5 py-3 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-lg shadow-indigo-200">
+      Contactar 
+    </a>
+ 
+  <!-- Confetti overlay -->
+  <div id="confetti-overlay" aria-hidden="true"></div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', function () {
+        if (window.feather) { feather.replace(); }
+        var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+        // Minimal emoji confetti burst
+        function spawnConfettiBurst(centerX, centerY, particles) {
+          var overlay = document.getElementById('confetti-overlay');
+          if (!overlay) return;
+          var total = particles || 120;
+          for (var i = 0; i < total; i++) {
+            var s = document.createElement('span');
+            s.className = 'confetti-emoji';
+            s.textContent = '';
+            // Random vector
+            var angle = Math.random() * Math.PI * 2;
+            var radius = 120 + Math.random() * 360; // px
+            var dx = Math.cos(angle) * radius;
+            var dy = Math.sin(angle) * radius;
+            var rot = (Math.random() * 720 - 360).toFixed(1) + 'deg';
+            s.style.left = (centerX - 10) + 'px';
+            s.style.top = (centerY - 10) + 'px';
+            s.style.setProperty('--dx', dx + 'px');
+            s.style.setProperty('--dy', dy + 'px');
+            s.style.setProperty('--rot', rot);
+            overlay.appendChild(s);
+            // Stagger a bit
+            s.style.animationDelay = (Math.random() * 120) + 'ms';
+            // Cleanup each particle after animation
+            setTimeout((function(node){ return function(){ if (node && node.parentNode) node.parentNode.removeChild(node); }; })(s), 1200);
+          }
+        }
+
+        function confettiThenRedirect(anchorEl, delayMs) {
+          var href = anchorEl.getAttribute('href');
+          // center = middle-bottom third of viewport
+          var cx = window.innerWidth / 2;
+          var cy = window.innerHeight / 2;
+          spawnConfettiBurst(cx, cy, 140);
+          setTimeout(function(){
+            try { if (window.fbq) fbq('track', 'Lead'); } catch (e) {}
+            try { if (window.gtag) gtag('event', 'generate_lead', { method: 'whatsapp' }); } catch (e) {}
+            window.open(href, '_blank');
+          }, delayMs || 4000);
+        }
+
+        // Confetti on click for WhatsApp CTAs in Elegí tu camino
+        var chooseLinks = document.querySelectorAll('#elige a[href^="https://wa.me"]');
+        chooseLinks.forEach(function(a){
+          a.addEventListener('click', function(e){
+            e.preventDefault();
+            confettiThenRedirect(a, 4000);
+          });
+        });
+      });
+    </script>
+  </body>
+  </html>
