@@ -1,93 +1,199 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spark Hub — Comunidad de Innovación</title>
-    <meta name="description" content="Sumate al Spark Hub, la comunidad de innovación, IA y tecnología impulsada por Camila Velasco. Conectá con profesionales, oportunidades y eventos exclusivos." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-      html { scroll-behavior: smooth; }
-      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial; }
-    </style>
-    <script src="https://unpkg.com/feather-icons"></script>
-  </head>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contacto — SPARK101 Tech</title>
+  <meta name="description" content="Contactá a Spark101 Tech. Consultanos sobre IA aplicada, automatización, capacitaciones y proyectos tecnológicos."/>
+  <meta name="theme-color" content="#09090b"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GB836XLLE"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-0GB836XLLE',{send_page_view:true,page_path:window.location.pathname});</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config={theme:{extend:{
+      fontFamily:{heading:['Sora','sans-serif'],body:['Inter','sans-serif']},
+      colors:{
+        neon:{'300':'#6ee7b7','400':'#34d399','500':'#10b981','600':'#059669'},
+        cyan:{'300':'#67e8f9','400':'#22d3ee','500':'#06b6d4'},
+        dark:{'50':'#18181b','100':'#1c1c1f','200':'#27272a','300':'#3f3f46','400':'#52525b','500':'#71717a','600':'#a1a1aa','700':'#d4d4d8','800':'#e4e4e7','900':'#f4f4f5','950':'#09090b'}
+      }
+    }}}
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:#09090b;color:#e4e4e7}
+    h1,h2,h3,h4,h5,h6,.font-heading{font-family:'Sora',sans-serif;letter-spacing:-.02em}
+    .grid-bg{position:relative;overflow:hidden}
+    .grid-bg::before{content:'';position:absolute;inset:0;
+      background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+      background-size:64px 64px;z-index:0}
+    .glow-sm{box-shadow:0 0 20px rgba(16,185,129,.15)}
+    .glow-md{box-shadow:0 0 40px rgba(16,185,129,.2)}
+    .glow-lg{box-shadow:0 0 60px rgba(16,185,129,.25),0 0 120px rgba(6,182,212,.1)}
+    .glass{background:rgba(255,255,255,.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06)}
+    .glass-hover{transition:all .3s ease}
+    .glass-hover:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.1);box-shadow:0 8px 32px rgba(0,0,0,.3),0 0 0 1px rgba(255,255,255,.05)}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    input,textarea,select{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:#e4e4e7;transition:all .2s}
+    input:focus,textarea:focus,select:focus{outline:none;border-color:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.15)}
+    input::placeholder,textarea::placeholder{color:#71717a}
+  </style>
+</head>
+<body class="grid-bg">
 
-  <body class="bg-gray-50 text-gray-900">
-    <main class="max-w-3xl mx-auto px-6 py-20">
-      <!-- Hero principal -->
-      <section class="relative overflow-hidden rounded-3xl bg-neutral-950 text-white ring-2 ring-violet-400/70 shadow-[0_0_40px_rgba(139,92,246,0.35)]">
-        <div class="absolute -inset-24 bg-[radial-gradient(circle_at_top_right,rgba(139,92,246,0.25),transparent_60%)]"></div>
+  <!-- Nav -->
+  <nav class="sticky top-0 z-50 glass border-b border-white/5">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="/" class="font-heading text-lg font-bold tracking-tight text-white">SPARK<span class="text-neon-400">101</span></a>
+      <a href="https://wa.me/message/SW2URWUI3XOJA1" target="_blank" rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-neon-500 text-dark-950 text-sm font-bold hover:bg-neon-400 transition-all glow-sm cursor-pointer">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.609l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.359 0-4.542-.812-6.265-2.175l-.438-.35-3.172 1.063 1.063-3.172-.35-.438A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </nav>
 
-        <div class="relative px-8 py-14 text-center">
-          <div class="inline-flex items-center px-4 py-1 rounded-full bg-white/10 text-white text-sm font-semibold">
-            🚀 Spark Hub – Comunidad de Innovación
-          </div>
-          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold leading-tight">
-            Conectá con el futuro de la tecnología
-          </h1>
-          <p class="mt-4 text-base sm:text-lg text-gray-300">
-            Sumate al Spark Hub y recibí novedades exclusivas sobre inteligencia artificial, automatización, innovación y oportunidades para crecer con la comunidad.
-          </p>
-        </div>
-      </section>
+  <!-- Hero -->
+  <section class="relative py-20 sm:py-28">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,.12),transparent_60%)]"></div>
+    <div class="relative max-w-3xl mx-auto px-6 text-center reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs font-medium text-neon-300 mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-neon-400 animate-pulse"></span>
+        Estamos para ayudarte
+      </div>
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold text-white leading-tight">
+        Contactanos
+      </h1>
+      <p class="mt-6 text-lg text-dark-600 max-w-xl mx-auto leading-relaxed">
+        Contanos qué necesitás: consultoría en IA, capacitaciones, automatización, o cualquier proyecto tecnológico. Te respondemos a la brevedad.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form + Info -->
+  <section class="py-8 reveal">
+    <div class="max-w-5xl mx-auto px-6 grid lg:grid-cols-5 gap-10">
 
       <!-- Formulario -->
-      <section class="mt-10 relative overflow-hidden rounded-3xl bg-white ring-2 ring-violet-500/80 shadow-[0_0_50px_rgba(139,92,246,0.45)]">
-        <div class="relative px-8 py-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-6">🧠 Unite al Spark Hub</h2>
+      <div class="lg:col-span-3 glass rounded-3xl p-8 sm:p-10 glow-lg">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5">
+          <input type="hidden" name="access_key" value="234fde61-ad41-4ad5-9ce5-ec248cd850d8"/>
+          <input type="hidden" name="subject" value="Nuevo contacto desde Spark101.tech"/>
+          <input type="hidden" name="from_name" value="Spark101 Tech"/>
+          <input type="hidden" name="redirect" value="https://spark101.tech/gracias.html"/>
+          <input type="checkbox" name="botcheck" style="display:none">
 
-          <form action="https://api.web3forms.com/submit" method="POST" id="form" class="max-w-md mx-auto space-y-4">
-            <!-- Access Key -->
-            <input type="hidden" name="access_key" value="234fde61-ad41-4ad5-9ce5-ec248cd850d8" />
-            <input type="hidden" name="subject" value="Nuevo contacto: Spark Hub" />
-            <input type="hidden" name="from_name" value="Spark101 Tech" />
-            <input type="hidden" name="redirect" value="https://spark101.tech/gracias.html" />
-            <input type="checkbox" name="botcheck" style="display:none">
-
-            <!-- Campos -->
+          <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+              <label for="name" class="block text-sm font-medium text-dark-600 mb-1.5">Nombre *</label>
               <input type="text" id="name" name="name" placeholder="Tu nombre" required
-                     class="mt-1 w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 px-4 py-3 shadow-sm">
+                class="w-full rounded-xl px-4 py-3 text-sm"/>
             </div>
-
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+              <label for="email" class="block text-sm font-medium text-dark-600 mb-1.5">Email *</label>
               <input type="email" id="email" name="email" placeholder="tu@email.com" required
-                     class="mt-1 w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 px-4 py-3 shadow-sm">
+                class="w-full rounded-xl px-4 py-3 text-sm"/>
             </div>
+          </div>
 
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700">Mensaje (opcional)</label>
-              <textarea id="message" name="message" rows="3" placeholder="Contame brevemente qué te gustaría compartir o aprender en el Hub"
-                        class="mt-1 w-full rounded-xl border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-900 px-4 py-3 shadow-sm"></textarea>
-            </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-dark-600 mb-1.5">Teléfono (opcional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+54 11 1234-5678"
+              class="w-full rounded-xl px-4 py-3 text-sm"/>
+          </div>
 
-            <!-- Botón -->
-            <div class="pt-4 text-center">
-              <button type="submit"
-                class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-lg shadow-[0_0_40px_rgba(99,102,241,0.35)] transition-all duration-300">
-                ✨ Quiero unirme al Spark Hub, contame más
-              </button>
-            </div>
-          </form>
+          <div>
+            <label for="interest" class="block text-sm font-medium text-dark-600 mb-1.5">¿En qué estás interesado/a?</label>
+            <select id="interest" name="interest" class="w-full rounded-xl px-4 py-3 text-sm">
+              <option value="">Seleccioná una opción</option>
+              <option value="consultoria">Consultoría en IA</option>
+              <option value="spark-lab">Spark Lab (sistemas agénticos)</option>
+              <option value="capacitacion">Capacitación / Workshop</option>
+              <option value="speaker">Contratar como Speaker</option>
+              <option value="automatizacion">Automatización de procesos</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-dark-600 mb-1.5">Mensaje *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Contanos qué necesitás o en qué podemos ayudarte..." required
+              class="w-full rounded-xl px-4 py-3 text-sm resize-none"></textarea>
+          </div>
+
+          <button type="submit"
+            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-neon-500 text-dark-950 font-bold shadow-[0_0_40px_rgba(16,185,129,.35)] hover:shadow-[0_0_60px_rgba(16,185,129,.5)] hover:bg-neon-400 transition-all cursor-pointer">
+            Enviar mensaje →
+          </button>
+        </form>
+      </div>
+
+      <!-- Info lateral -->
+      <div class="lg:col-span-2 space-y-6">
+
+        <div class="glass glass-hover rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-heading text-sm font-bold text-white mb-1">Email</h3>
+          <a href="mailto:camila.velasco@spark101.tech" class="text-neon-400 text-sm hover:underline">camila.velasco@spark101.tech</a>
         </div>
-      </section>
 
-      <!-- Footer simple -->
-      <footer class="text-center text-gray-500 mt-12 text-sm">
-        2025 Spark101 Tech — Desarrollado por Camila Velasco
-      </footer>
-    </main>
+        <div class="glass glass-hover rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-400" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.609l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.359 0-4.542-.812-6.265-2.175l-.438-.35-3.172 1.063 1.063-3.172-.35-.438A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          </div>
+          <h3 class="font-heading text-sm font-bold text-white mb-1">WhatsApp</h3>
+          <a href="https://wa.me/message/SW2URWUI3XOJA1" target="_blank" class="text-neon-400 text-sm hover:underline">Envianos un mensaje</a>
+        </div>
 
-    <script>
-      window.addEventListener('DOMContentLoaded', function () {
-        if (window.feather) feather.replace();
-      });
-    </script>
-  </body>
+        <div class="glass glass-hover rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <h3 class="font-heading text-sm font-bold text-white mb-1">Instagram</h3>
+          <a href="https://www.instagram.com/spark101.tech" target="_blank" class="text-neon-400 text-sm hover:underline">@spark101.tech</a>
+        </div>
+
+        <div class="glass glass-hover rounded-2xl p-6">
+          <div class="w-10 h-10 rounded-xl bg-neon-500/10 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-neon-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-heading text-sm font-bold text-white mb-1">Ubicación</h3>
+          <p class="text-dark-600 text-sm">Buenos Aires, Argentina 🇦🇷</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 py-10 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <a href="/" class="font-heading text-sm font-bold text-dark-500 hover:text-white transition-colors">SPARK<span class="text-neon-500">101</span> TECH</a>
+      <p class="text-dark-500 text-xs">© 2026 Spark101 Tech — Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- FAB WhatsApp -->
+  <a href="https://wa.me/message/SW2URWUI3XOJA1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+    class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-neon-500 hover:bg-neon-400 text-dark-950 flex items-center justify-center shadow-[0_0_30px_rgba(16,185,129,.35)] transition-all">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.609l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.359 0-4.542-.812-6.265-2.175l-.438-.35-3.172 1.063 1.063-3.172-.35-.438A9.956 9.956 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+  </a>
+
+  <!-- Reveal animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})
+      },{threshold:.15});
+      document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    });
+  </script>
+
+</body>
 </html>
