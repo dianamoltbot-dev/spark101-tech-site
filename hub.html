@@ -26,8 +26,8 @@
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:#09090b;color:#e4e4e7}
     h1,h2,h3,h4,h5,h6,.font-heading{font-family:'Sora',sans-serif;letter-spacing:-.02em}
-    .grid-bg{position:relative;overflow:hidden}
-    .grid-bg::before{content:'';position:absolute;inset:0;
+    .grid-bg{position:relative}
+    .grid-bg::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;
       background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
       background-size:64px 64px;z-index:0}
     .glow-sm{box-shadow:0 0 20px rgba(16,185,129,.15)}
